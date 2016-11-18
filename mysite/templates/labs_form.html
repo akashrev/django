@@ -51,25 +51,16 @@
                     You submitted an empty form.
                 </p>
             {% endif %}
-
         </center>
 
-        <div class="container">
-            <div class="header">
-                <span>
-                    Expand
-                </span>
-            </div>
-            <div class="content">
-                <pre>
-                    {{raw_json}}
-                </pre>
-            </div>
+        <a href="javascript:;" onclick=show()>
+            Request for JSON
+        </a>
+        <div id="expand">
+            <pre>
+                {{raw_json}}
+            </pre>
         </div>
-
-        <pre>
-            {{raw_json}}
-        </pre>
 
     </body>
 </html>

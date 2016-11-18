@@ -52,7 +52,6 @@ def translator_request(message):
                     if key == 'translation_score':
                         translation_score.append(value)    # append translation_score data in a list
     #translation_list = [x.encode('utf-8') for x in translation_list]
-    #translation_score = [x for x in translation_score]
     zipped = zip(translation_list, translation_score)
     return zipped, json_response
 
