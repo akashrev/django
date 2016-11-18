@@ -24,7 +24,7 @@ def search(request):
 '''
 
 def translator_request(message):
-    engine_list = []
+    translation_score = []
     translation_list = []
     #message = "Buy puma casual shoes at a discount of 50 at select stores."
     headers = {
@@ -43,35 +43,30 @@ def translator_request(message):
     json_response = json.dumps(response.json(), ensure_ascii=False, indent=4, sort_keys=True).encode('utf-8')
     #return json_response
     new_json = json.loads(json_response)
-    # print new_json
-    for key, value in new_json.items():  # dictionary/JSON
-        for list1 in value:  # first list
+    for keyy, valuee in new_json.items():  # dictionary/JSON
+        for list1 in valuee:  # first list
             for item in list1:  # second list
                 for key, value in item.items():  # dictionaries
-                    if key == 'engine':
-                        engine_list.append(value)
-                        #return engine_list
                     if key == 'translation':
-                        translation_list.append(value)
-    engine_list = [x.encode('utf-8') for x in engine_list]
-    translation_list = [x.encode('utf-8') for x in translation_list]
-    zipped = zip(engine_list, translation_list)
+                        translation_list.append(value)  # append translation data in a list
+                    if key == 'translation_score':
+                        translation_score.append(value)    # append translation_score data in a list
+    #translation_list = [x.encode('utf-8') for x in translation_list]
+    #translation_score = [x for x in translation_score]
+    zipped = zip(translation_list, translation_score)
     return zipped, json_response
 
 
 def index(request):
-    #message1 = []
-    #message2 = []
     if request.GET.get('search'):
         message = request.GET.get('search')
-        result , json = translator_request(message)
+        result, json = translator_request(message)
         return render(request, 'labs_form.html', {
             'search': message, 'result': result, 'raw_json': json,
-            #        'engine': message1, 'translation': message2,
         })
 
     else:
-        result = 'You submitted an empty form.'
+        #result = ''
         return render(request, 'labs_form.html', {
-            'result': result,
+            #'result': result,
             })

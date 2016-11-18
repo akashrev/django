@@ -18,9 +18,7 @@
                 <input type="submit" value="Translate">
             </form>
 
-            {% if result == 'You submitted an empty form.' %}
-                <p> {{result}} </p>
-            {% else %}
+            {% if result %}
                 <p>
                     You searched for: {{search}}
                 </p>
@@ -28,42 +26,50 @@
                 <table>
                     <tr>
                         <th>
-                            Engine
+                            Translation
                         </th>
                         <th>
-                            Translation
+                            Translation Score
                         </th>
                     </tr>
                     <tr>
-                        {% for engine, translation in result %}
+                        {% for translation, score in result %}
                             <tr>
                                 <td>
-                                    {{ engine }}
+                                    {{ translation }}
                                 </td>
                                 <td>
-                                    {{ translation }}
+                                    {{ score }}
                                 </td>
                             </tr>
                         {% endfor %}
                     </tr>
                 </table>
+
+             {% else %}
+                <p>
+                    You submitted an empty form.
+                </p>
             {% endif %}
+
         </center>
 
+        <div class="container">
+            <div class="header">
+                <span>
+                    Expand
+                </span>
+            </div>
+            <div class="content">
+                <pre>
+                    {{raw_json}}
+                </pre>
+            </div>
+        </div>
 
-    <div class="container">
-    <div class="header"><span>Expand</span>
-
-    </div>
-    <div class="content">
-            <pre>
+        <pre>
             {{raw_json}}
         </pre>
-
-    </div>
-</div>
-
-
 
     </body>
 </html>
