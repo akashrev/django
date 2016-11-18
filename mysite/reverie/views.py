@@ -58,6 +58,7 @@ def translator_request(message):
     zipped = zip(engine_list, translation_list)
     return zipped, json_response
 
+
 def index(request):
     #message1 = []
     #message2 = []
