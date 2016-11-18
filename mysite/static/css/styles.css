@@ -1,0 +1,53 @@
+
+/* table*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #999;
+    color: white;
+}
+
+/* search box and submit button */
+
+input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0px 8px 0px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    padding: 12px 20px;
+    margin: 8px 0px 8px 0px;
+    box-sizing: border-box;
+}
+
+/* raw_json block */
+
+.container {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.container div {
+    width:100%;
+}
+.container .header {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.container .content {
+    display: none;
+    padding : 5px;
+}

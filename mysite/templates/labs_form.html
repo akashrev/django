@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+
+    <head>
+        <title>Reverie Translator</title>
+        <link rel="stylesheet" href="{% static "css/styles.css" %}" />
+        <script type="text/javascript" src="{% static "js/style.js" %}"> </script>
+
+    </head>
+    <body>
+        <center>
+<!--            <h1> Reverie Language Technologies </h1>    -->
+            <img src="{% static "images/reverie.png" %}" alt="Reverie Logo" />
+
+            <form action="" method="get">
+                <input placeholder="Enter Text to Translate" type="text" name="search">
+                <input type="submit" value="Translate">
+            </form>
+
+            {% if  result == 'You submitted an empty form.' %}
+                <p> {{result}} </p>
+            {% else %}
+                <p>
+                    You searched for: {{search}}
+                </p>
+
+                <table>
+                    <tr>
+                        <th>
+                            Engine
+                        </th>
+                        <th>
+                            Translation
+                        </th>
+                    </tr>
+                    <tr>
+                        {% for engine, translation in result %}
+                            <tr>
+                                <td>
+                                    {{ engine }}
+                                </td>
+                                <td>
+                                    {{ translation }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tr>
+                </table>
+            {% endif %}
+        </center>
+
+
+    <div class="container">
+    <div class="header"><span>Expand</span>
+
+    </div>
+    <div class="content">
+            <pre>
+            {{raw_json}}
+        </pre>
+
+    </div>
+</div>
+
+
+
+    </body>
+</html>
+
+
+<!--
+
+
+<form method="GET">
+    Question: <input type="text" name="search"><br/>
+    Name: <input type="text" name="name"><br/>
+    <input type="submit" value="Submit" />
+</form><br/><br/>
+
+
+<p>{{questions}}</p>
+
+-->
