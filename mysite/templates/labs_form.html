@@ -45,6 +45,17 @@
                         {% endfor %}
                     </tr>
                 </table>
+        </center>
+                <br />
+                <a href="javascript:;" onclick=show()>
+                    Request for JSON
+                </a>
+                <div id="expand">
+                    <pre>
+                        {{raw_json}}
+                    </pre>
+                </div>
+        <center>
 
              {% else %}
                 <p>
@@ -53,29 +64,6 @@
             {% endif %}
         </center>
 
-        <a href="javascript:;" onclick=show()>
-            Request for JSON
-        </a>
-        <div id="expand">
-            <pre>
-                {{raw_json}}
-            </pre>
-        </div>
-
     </body>
 </html>
 
-
-<!--
-
-
-<form method="GET">
-    Question: <input type="text" name="search"><br/>
-    Name: <input type="text" name="name"><br/>
-    <input type="submit" value="Submit" />
-</form><br/><br/>
-
-
-<p>{{questions}}</p>
-
--->
