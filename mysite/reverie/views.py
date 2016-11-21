@@ -5,6 +5,7 @@ from django.shortcuts import render
 import datetime
 from django.http import HttpResponse
 import requests, json
+#from decimal import Decimal
 
 # Create your views here.
 '''
@@ -50,7 +51,8 @@ def translator_request(message):
                     if key == 'translation':
                         translation_list.append(value)  # append translation data in a list
                     if key == 'translation_score':
-                        translation_score.append(value)    # append translation_score data in a list
+                        output = round(value, 3)
+                        translation_score.append(output)    # append translation_score data in a list
     #translation_list = [x.encode('utf-8') for x in translation_list]
     zipped = zip(translation_list, translation_score)
     return zipped, json_response
@@ -69,3 +71,4 @@ def index(request):
         return render(request, 'labs_form.html', {
             #'result': result,
             })
+

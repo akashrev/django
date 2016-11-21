@@ -12,18 +12,20 @@
     <body>
         <center>
 <!--            <h1> Reverie Language Technologies </h1>    -->
-            <img src="{% static "images/reverie.png" %}" alt="Reverie Logo" />
+            <img src="{% static "images/reverie1.png" %}" alt="Reverie Logo"  height="45%" width="40%" />
+            <img src="{% static "images/bubble.gif" %}" alt="Bubble Icon" height="60" width="40" />
 
             <form action="" method="get">
                 <input placeholder="Enter Text to Translate" type="text" name="search">
-                <input type="submit" value="Translate">
+                <input type="submit" value="Translate" >
             </form>
 
             {% if result %}
                 <p>
                     You searched for: {{search}}
                 </p>
-                <br/><br/><br/>
+                <br/>
+                <br/>
                 <table>
                     <tr>
                         <th>
@@ -48,19 +50,19 @@
                 </table>
         </center>
                 <br />
-
                 <a href="javascript:;" onclick=show()>
-                    <button class="button">Request for JSON</button>
-                <br/><br/>
+                    <button class="button">
+                        Request for JSON
+                    </button>
+                    <br/>
+                    <br/>
                 </a>
                 <div id="expand">
-
                     <pre>
                         {{raw_json}}
                     </pre>
                 </div>
         <center>
-
              {% else %}
                 <p>
                     You submitted an empty form.

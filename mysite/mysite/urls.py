@@ -28,5 +28,6 @@ url(r'^time2/$', current_datetime),
 url(r'^names/$', printnames),
 #url(r'^labs/$', reverie_labs),
 #url(r'^search/$', search),
-url(r'^index/$', index),
+#url(r'^index/$', index),
+url(r'$', index),
 ]
