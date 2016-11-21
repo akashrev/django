@@ -48,7 +48,7 @@ div#expand {border-style: dashed; border-color : #999; padding: 45px;}
 /* JSON button */
 
 .button {
-    background-color: #999; /* Green */
+    background-color: #999; /* Gray */
     border: none;
     border-radius: 10px;
     color: white;
@@ -70,7 +70,7 @@ div#expand {border-style: dashed; border-color : #999; padding: 45px;}
 
 
 .button:active {
-  background-color: #3e8e41;
+  background-color: #999;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
