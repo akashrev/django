@@ -5,6 +5,7 @@
     <head>
         <title>Reverie Translator</title>
         <link rel="stylesheet" href="{% static "css/styles.css" %}" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
         <script type="text/javascript" src="{% static "js/style.js" %}"> </script>
 
     </head>
@@ -22,7 +23,7 @@
                 <p>
                     You searched for: {{search}}
                 </p>
-
+                <br/><br/><br/>
                 <table>
                     <tr>
                         <th>
@@ -47,10 +48,13 @@
                 </table>
         </center>
                 <br />
+
                 <a href="javascript:;" onclick=show()>
-                    Request for JSON
+                    <button class="button">Request for JSON</button>
+                <br/><br/>
                 </a>
                 <div id="expand">
+
                     <pre>
                         {{raw_json}}
                     </pre>
@@ -66,4 +70,3 @@
 
     </body>
 </html>
-
