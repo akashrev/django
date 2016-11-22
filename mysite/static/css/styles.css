@@ -36,6 +36,7 @@ input[type=text] {
     box-sizing: border-box;
 }
 input[type=submit] {
+    width: 13%;
     padding: 9px 15px;
     margin: 8px 0px 8px 0px;
     box-sizing: border-box;
@@ -67,6 +68,7 @@ div#expand {
     cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+    outline:none;
 }
 .button:hover {
     box-shadow: 0 9px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -75,4 +77,12 @@ div#expand {
   background-color: #bbb;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+a{
+outline:none;
+}
+
+*{
+outline:none;
 }

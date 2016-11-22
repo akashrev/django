@@ -15,7 +15,7 @@
         <center>
 <!--            <h1> Reverie Language Technologies </h1>    -->
             <img src="{% static "images/reverie1.png" %}" alt="Reverie Logo"  height="45%" width="40%" />
-            <img src="{% static "images/bubble.gif" %}" alt="Bubble Icon" height="60" width="40" /><br/>
+            <img src="{% static "images/bubble.gif" %}" alt="Labs Icon" height="60" width="40" /><br/>
 
             <form action="" method="get">
                 <input placeholder="Enter Text to Translate" type="text" name="search">
@@ -52,23 +52,24 @@
                     </tr>
                 </table>
         </center>
-                <br />
-                <a href="javascript:;" onclick=show() >
-                    <button class="button">
-                        Request for JSON
-                    </button>
-                    <br/>
-                    <br/>
-                </a>
-                <div id="expand">
-                    <pre>
-                        {{raw_json}}
-                    </pre>
-                </div>
+        <br />
+        <a href="javascript:;" onclick=show() >
+            <button class="button">
+                Request for JSON
+            </button>
+            <br/>
+            <br/>
+        </a>
+        <div id="expand">
+            <pre>
+                {{raw_json}}
+            </pre>
+        </div>
 
-      <script>window.onload = function(){
+        <script>
+            window.onload = function(){
             document.getElementById('expand').style.display = 'none';
-      }
+            }
         </script>
 
         <center>
