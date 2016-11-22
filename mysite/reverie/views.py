@@ -59,8 +59,10 @@ def translator_request(message):
 
 
 def index(request):
-    if request.GET.get('search'):
+
+    if request.GET.get('submit'):
         message = request.GET.get('search')
+
         result, json = translator_request(message)
         return render(request, 'labs_form.html', {
             'search': message, 'result': result, 'raw_json': json,
@@ -71,4 +73,3 @@ def index(request):
         return render(request, 'labs_form.html', {
             #'result': result,
             })
-

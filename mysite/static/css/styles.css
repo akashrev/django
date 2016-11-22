@@ -6,8 +6,8 @@ body{
     padding : 130px 20% 10px 20%;
     }
 
-/* table*/
 
+/* table*/
 table {
     border-collapse: collapse;
     width: 100%;
@@ -27,8 +27,8 @@ th {
     color: white;
 }
 
-/* search box and submit button */
 
+/* search box and submit button */
 input[type=text] {
     width: 60%;
     padding: 9px 15px;
@@ -41,16 +41,18 @@ input[type=submit] {
     box-sizing: border-box;
 }
 
-/* raw_json block */
 
+/* raw_json block */
 div#expand {
     display:block;
     border-style: dashed;
     border-color : #999;
-    padding: 45px;}
+    padding: 45px;
+    border-radius: 8px;
+}
+
 
 /* JSON button */
-
 .button {
     background-color: #999; /* Gray */
     border: none;

@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="{% static "css/styles.css" %}" />
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
         <script type="text/javascript" src="{% static "js/style.js" %}"> </script>
+<script>
 
+</script>
     </head>
     <body>
         <center>
@@ -17,12 +19,13 @@
 
             <form action="" method="get">
                 <input placeholder="Enter Text to Translate" type="text" name="search">
-                <input type="submit" value="Translate" >
+            <!--    <input type="submit" name = "submit" value="Translate" >    -->
+                <input id="submit" type = "submit" value="Translate" name="submit" >
             </form>
 
             {% if result %}
                 <p>
-                    You searched for: {{search}}
+                    <b>Input String:</b> {{search}}
                 </p>
                 <br/>
                 <br/>
@@ -50,7 +53,7 @@
                 </table>
         </center>
                 <br />
-                <a href="javascript:;" onclick=show()>
+                <a href="javascript:;" onclick=show() >
                     <button class="button">
                         Request for JSON
                     </button>
@@ -62,10 +65,16 @@
                         {{raw_json}}
                     </pre>
                 </div>
+
+      <script>window.onload = function(){
+            document.getElementById('expand').style.display = 'none';
+      }
+        </script>
+
         <center>
              {% else %}
                 <p>
-                    <!-- You submitted an empty form.  -->
+                    <!-- You submitted an empty form. -->
                 </p>
             {% endif %}
         </center>

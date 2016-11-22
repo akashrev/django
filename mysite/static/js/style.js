@@ -1,4 +1,4 @@
-
+/* Request-JSON button to show and hide JSON */
 
 function show()
     {
