@@ -73,16 +73,10 @@ div#expand {
 .button:hover {
     box-shadow: 0 9px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 .button:active {
   background-color: #bbb;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-a{
-outline:none;
-}
-
-*{
-outline:none;
-}

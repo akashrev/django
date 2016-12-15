@@ -31,3 +31,4 @@ url(r'^names/$', printnames),
 #url(r'^index/$', index),
 url(r'$', index),
 ]
+
